@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="@@DESCRIPTION@@">
   <meta name="theme-color" content="#f6f4ee">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; media-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta property="og:title" content="Market Fit">
   <meta property="og:description" content="Find the problem worth solving. Grow while you do it.">
   <meta property="og:type" content="website">
@@ -22,15 +22,26 @@
 <header class="masthead">
   <div class="wrap">
     <a class="brand" href="#main" aria-label="Market Fit home"><span class="brand-mark" aria-hidden="true"></span><span><b>Amplifier</b><small>Skills for thoughtful work</small></span></a>
-    <nav class="nav" aria-label="Main navigation"><a href="#explore">Explore</a><a href="#method">Method</a><a href="#teaching">Teaching</a><a href="#bar">The bar</a><a class="nav-use" href="#use-skill">Use the skill</a></nav>
+    <nav class="nav" aria-label="Main navigation"><a href="#film">Film</a><a href="#explore">Explore</a><a href="#method">Method</a><a href="#teaching">Teaching</a><a href="#bar">The bar</a><a class="nav-use" href="#use-skill">Use the skill</a></nav>
   </div>
 </header>
 <main id="main" class="wrap">
   <section class="hero fit-hero" aria-labelledby="hero-title">
     <div class="hero-grid">
       <div><p class="eyebrow">A bounded coaching skill</p><h1 id="hero-title">Market<br>Fit</h1><p class="promise">Find the problem worth solving.<br>Grow while you do it.</p></div>
-      <div class="hero-intro"><p class="lede">Most good work is bigger than the window people see it through. This skill helps you and your agent carve one clear offer out of it, for one person, under a name they would recognize.</p><p>It reads where you start, coaches five passes with your attempt first, and stops on a fixed rule. You get two cards back: one for the work, one for you.</p><div class="actions"><a class="button primary" href="#explore">See a run</a><a class="text-link" href="#use-skill">Get the skill</a></div><p class="note hero-note">Examples are fictional. The benchmark hasn't run yet. <a href="#bar">See the bar it has to clear.</a></p></div>
+      <div class="hero-intro"><p class="lede">Most good work is bigger than the window people see it through. This skill helps you and your agent carve one clear offer out of it, for one person, under a name they would recognize.</p><p>It reads where you start, coaches five passes with your attempt first, and stops on a fixed rule. You get two cards back: one for the work, one for you.</p><div class="actions"><a class="button primary" href="#film">Watch the film</a><a class="text-link" href="#explore">See a run</a><a class="text-link" href="#use-skill">Get the skill</a></div><p class="note hero-note">Examples are fictional. The benchmark hasn't run yet. <a href="#bar">See the bar it has to clear.</a></p></div>
     </div>
+  </section>
+
+  <section id="film" class="film-section" aria-labelledby="film-title">
+    <div class="film-heading"><h2 id="film-title">The whole idea in under a minute.</h2><p>Sound on. Captions included.</p></div>
+    <video class="film" controls preload="metadata" playsinline poster="assets/market-fit-film-poster.jpg" width="1920" height="1080" aria-describedby="film-note">
+      <source src="assets/market-fit-film.mp4" type="video/mp4">
+      <source src="assets/market-fit-film.webm" type="video/webm">
+      <track kind="captions" src="assets/market-fit-film.vtt" srclang="en" label="English" default>
+      <a href="assets/market-fit-film.mp4">Download the film (MP4)</a>
+    </video>
+    <p id="film-note" class="note">A fictional example throughout. The nurse manager, the ward and ShiftEngine are made up.</p>
   </section>
 
   <section id="explore" class="map-section" aria-labelledby="explore-heading">
@@ -78,7 +89,7 @@
 
   <section id="teaching" class="section two-col questions-section" aria-labelledby="teaching-title">
     <div><p class="eyebrow">Attempt first, always</p><h2 id="teaching-title">How it<br>teaches.</h2><p class="section-intro">Answer-first help builds dependence. Here you try, and the agent responds to what you actually did. The support fades as you take over.</p>
-      <div class="fade-steps" role="list"><div role="listitem"><small>Round 1</small><b>Agent shows</b><span>A short worked example, then your turn.</span><i style="--carry:100%" aria-hidden="true"></i></div><div role="listitem"><small>Round 2</small><b>Together</b><span>You lead. Prompts only at the gates.</span><i style="--carry:55%" aria-hidden="true"></i></div><div role="listitem"><small>Round 3</small><b>You lead</b><span>The agent checks gates and asks why.</span><i style="--carry:20%" aria-hidden="true"></i></div></div>
+      <div class="fade-steps" role="list"><div role="listitem"><small>Round 1</small><b>Agent shows</b><span>A short worked example, then your turn.</span><i class="carry-100" aria-hidden="true"></i></div><div role="listitem"><small>Round 2</small><b>Together</b><span>You lead. Prompts only at the gates.</span><i class="carry-55" aria-hidden="true"></i></div><div role="listitem"><small>Round 3</small><b>You lead</b><span>The agent checks gates and asks why.</span><i class="carry-20" aria-hidden="true"></i></div></div>
       <p class="note">The bar shows how much of the work the agent carries. A returning user starts at the level their last growth card recommends.</p>
     </div>
     <div><h3 class="question-heading">Eight teaching moves</h3><ol class="question-list move-list">@@MOVES@@</ol></div>

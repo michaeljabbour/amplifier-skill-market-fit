@@ -5,6 +5,8 @@
 - Add the launch zone as the default target: a six-item checklist (customer, problem, name, picture, defense, signal) that marks a fit card as ready to carry a campaign. The run stops when it is reached.
 - Report launch zone status on the fit card, item by item.
 - Show the launch zone on the site and add a benchmark test for stopping in it.
+- Add the Market Fit film to the site, with a poster and English captions.
+- Fix pass labels overlapping on phone-width screens, and the scaffold bars that the CSP silently blocked.
 
 ## 0.1.0 (2026-10-22)
 

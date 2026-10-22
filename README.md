@@ -47,6 +47,10 @@ A useful run ends with two cards. See [a worked example](docs/EXAMPLES.md), dips
 3. **You choose.** Every choice is logged with the option you turned down and your reason. No reason, no entry.
 4. **Two cards.** A fit card for the work and a growth card for you, with the full trace from start to finish.
 
+## The film
+
+A 53-second film explains the idea: an AI coach that sharpens your pitch and you, round by round, until the work reaches the launch zone. It plays on the [site](https://michaeljabbour.github.io/amplifier-skill-market-fit/#film) and lives at `site/assets/market-fit-film.mp4` with English captions. The example in it is fictional.
+
 ## How it stops
 
 The target is agreed before the first pass. By default it is the launch zone: the fit card is clear enough to put in front of strangers in a campaign (one customer, a costed problem, a name a stranger can decode, a ten-second picture, a user who can defend every line, and a real signal or a plan to get one). The run stops there. Three rounds at most. A failed gate sends you back to that pass only, never through all five again. If a full round doesn't move the work, the problem is upstream (the wrong customer or the wrong pain), and the skill says so and stops. Every run ends with both cards, including runs that miss.
