@@ -1,0 +1,126 @@
+{
+  "name": "Market Fit",
+  "version": "0.1.0",
+  "description": "A coaching skill that helps a person carve one clear, customer-named offer out of a large body of work, and grow their own judgment while doing it.",
+  "skill_name": "market-fit",
+  "theme": {
+    "family": "Amplifier Smart Tools",
+    "version": "0.1.0",
+    "accent": "#3d5a73"
+  },
+  "dimensions": ["Customer", "Problem", "Naming", "Reasoning", "Evidence"],
+  "examples": [
+    {
+      "id": "lab",
+      "label": "A university lab's open-source library",
+      "outcome": "Target met in round two",
+      "brief": "A lab built a library that matches patient records across hospital datasets. A few labs use it. Target: a research coordinator understands it after one read.",
+      "from_name": "LinkGraph",
+      "from_says": "Says: we build graphs.",
+      "to_name": "OneRecord",
+      "to_says": "Says: each patient shows up once.",
+      "started": "A scalable, graph-based entity resolution toolkit for biomedical data.",
+      "got_to": "Merge your sites and trust the patient count.",
+      "checkpoints": ["Open", "Find", "Name", "Show", "Teach", "Test", "Teach", "Test", "Close"],
+      "round_breaks": [6],
+      "trace": {
+        "Customer":  [1, 3, 3, 3, 3, 3, 3, 3, 3],
+        "Problem":   [1, 3, 3, 3, 3, 3, 3, 3, 3],
+        "Naming":    [1, 1, 2, 2, 1, 1, 2, 2, 2],
+        "Reasoning": [2, 2, 2, 2, 3, 2, 3, 3, 3],
+        "Evidence":  [1, 1, 1, 1, 1, 1, 1, 2, 2]
+      },
+      "dips": [
+        {"dimension": "Naming", "at": 4, "note": "Naming drops at Teach: a skeptic's question made the user doubt a name they liked. Standards rose faster than the draft."},
+        {"dimension": "Reasoning", "at": 5, "note": "Reasoning drops at the first Test: a confident answer met a miss, then recovered higher."}
+      ],
+      "fit": [
+        ["Customer", "A research coordinator merging three hospitals' data before a grant report"],
+        ["Expensive problem", "The same patient appears under different spellings and IDs, so counts are wrong"],
+        ["Cost today", "Weeks of hand-matching per report (user's estimate, unverified)"],
+        ["Riskiest assumption", "Coordinators can run it without IT approval"],
+        ["Evidence", "Met in a mock read. No signal from real coordinators yet."]
+      ],
+      "decisions": [
+        "Find: coordinator over data scientist, because \"they get blamed when the count is wrong.\"",
+        "Name: OneRecord over CleanCohort, because \"cohort is a word only epidemiologists love.\"",
+        "Teach: lead with \"nothing to install,\" because \"IT just needs a line.\""
+      ],
+      "next": "Start on Evidence. Talk to three real coordinators before round three."
+    },
+    {
+      "id": "staffing",
+      "label": "A hospital staffing startup",
+      "outcome": "Target met after splitting the customer",
+      "brief": "Two founders built an app that fills open nursing shifts. Pilots stall after the demo. Target: a nurse manager asks for a trial after one demo.",
+      "from_name": "ShiftEngine",
+      "from_says": "Says: we have an engine.",
+      "to_name": "Covered",
+      "to_says": "Says: the shift gets filled.",
+      "started": "An AI-powered workforce orchestration engine for healthcare.",
+      "got_to": "One tap and the shift is covered by someone qualified.",
+      "checkpoints": ["Open", "Find", "Name", "Show", "Teach", "Test", "Find", "Name", "Test", "Close"],
+      "round_breaks": [6],
+      "trace": {
+        "Customer":  [1, 2, 2, 2, 2, 1, 3, 3, 3, 3],
+        "Problem":   [2, 2, 2, 2, 2, 2, 3, 3, 3, 3],
+        "Naming":    [2, 2, 3, 3, 3, 3, 2, 3, 3, 3],
+        "Reasoning": [1, 1, 1, 2, 2, 2, 2, 2, 3, 3],
+        "Evidence":  [1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
+      },
+      "dips": [
+        {"dimension": "Customer", "at": 5, "note": "Customer drops at the first Test: managers and staff nurses wanted different things. The card held two customers."},
+        {"dimension": "Naming", "at": 6, "note": "Naming drops at the second Find: splitting the customer made the old name wrong."}
+      ],
+      "fit": [
+        ["Customer", "A nurse manager getting a call-out at 5am"],
+        ["Expensive problem", "Filling a last-minute gap means a phone tree and guesswork about who is eligible"],
+        ["Cost today", "About an hour per call-out, plus overtime when nobody answers (founders' estimate)"],
+        ["Riskiest assumption", "Staff answer a text faster than a phone call"],
+        ["Evidence", "Two of three mock managers asked for a trial. No paid pilot yet."]
+      ],
+      "decisions": [
+        "Find, round two: nurse manager over staff nurse, because \"managers pay; nurses just answer texts.\"",
+        "Name: Covered over ShiftSwap, because \"it says what the manager gets at 5am.\"",
+        "Show: drop the scheduling dashboard from the demo, because \"nobody asked for a dashboard.\""
+      ],
+      "next": "Start on Evidence. Run one real pilot on one ward."
+    },
+    {
+      "id": "campus",
+      "label": "A campus study app that stalled",
+      "outcome": "Stopped: no costly problem found yet",
+      "brief": "A teaching team built an AI study companion. Students try it once. Target: a student says why they'd come back, unprompted.",
+      "from_name": "StudyMesh",
+      "from_says": "Says: we have a mesh.",
+      "to_name": "(no name yet)",
+      "to_says": "The skill stopped before naming. That was the right call.",
+      "started": "A mesh of AI study agents that personalizes learning.",
+      "got_to": "We don't know which students lose sleep over this. We're going to ask ten of them.",
+      "checkpoints": ["Open", "Find", "Name", "Show", "Teach", "Test", "Find", "Test", "Close"],
+      "round_breaks": [6],
+      "trace": {
+        "Customer":  [1, 2, 2, 2, 2, 2, 2, 2, 2],
+        "Problem":   [1, 1, 1, 1, 1, 1, 1, 1, 1],
+        "Naming":    [1, 1, 2, 2, 2, 2, 2, 2, 2],
+        "Reasoning": [1, 1, 1, 2, 2, 1, 2, 2, 3],
+        "Evidence":  [1, 1, 1, 1, 1, 1, 2, 2, 3]
+      },
+      "dips": [
+        {"dimension": "Reasoning", "at": 5, "note": "Reasoning drops at the first Test: a polished pitch met a shrug, and the user could not say why."}
+      ],
+      "fit": [
+        ["Customer", "First-year students in large lecture courses (still a category)"],
+        ["Expensive problem", "Unknown. No pain sentence passed the Find gate in two rounds."],
+        ["Cost today", "Unknown. The skill asked twice and did not invent one."],
+        ["Riskiest assumption", "That students feel a problem worth changing habits for"],
+        ["Evidence", "Missed twice. Stopped by the stall rule."]
+      ],
+      "decisions": [
+        "Find, round two: keep \"first-years\" over \"all students,\" because \"they're the ones who drop out.\"",
+        "Test: stop instead of a third round, because \"we're guessing, and guessing faster won't help.\""
+      ],
+      "next": "Start on Problem. Interview ten first-years about their worst week before running again."
+    }
+  ]
+}

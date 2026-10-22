@@ -1,0 +1,160 @@
+# One bounded Market Fit round, following @market-fit:skills/market-fit/SKILL.md.
+# The recipe only sequences the skill and puts the human at each decision. The
+# method itself lives in the skill.
+#
+# Usage:
+#   recipes(operation="execute", recipe_path="@market-fit:recipes/market-fit-round.yaml",
+#           context={"work": "docs/overview.md",
+#                    "audience": "Research coordinators at teaching hospitals",
+#                    "target": "A coordinator can say what it does after one read"})
+#   # Pauses after "read". Answer the opening questions and agree the target:
+#   recipes(operation="approve", session_id="<id>", stage_name="read",
+#           message="1. A coordinator merging three sites before a grant deadline ...")
+#   recipes(operation="resume", session_id="<id>")
+#   # Pauses after "carve". Choose at each pass and give your reasons:
+#   recipes(operation="approve", session_id="<id>", stage_name="carve",
+#           message="Find: keep B because ... Name: OneRecord over LinkGraph because ...")
+#   recipes(operation="resume", session_id="<id>")
+#   # Deny at either gate to stop. A denied run writes no cards.
+#
+# Nothing in the user's work is edited. The cards are written under work_dir.
+#
+# Why this recipe is legacy (no schema_version: 2): every step runs as
+# `agent: self`, the calling session's own agent. That session has the
+# market-fit bundle loaded, so the @market-fit: skill paths resolve and the step
+# can read files. A v2 closure refuses `self` and would also have to carry this
+# bundle itself so those mentions resolve.
+
+name: market-fit-round
+description: "One bounded Market Fit round: an opening read of the person, five passes with the user choosing at each, then a fit card and a growth card."
+version: "1.0.0"
+
+context:
+  work:
+    type: string
+    required: true
+    description: "Path to material describing the body of work (never modified)"
+  audience:
+    type: string
+    required: true
+    description: "Who the offer is for, as the user currently sees it"
+  target:
+    type: string
+    default: ""
+    description: "An observable result that means done (agreed at the read gate if empty)"
+  work_dir:
+    type: string
+    default: ".market-fit"
+  budget:
+    type: string
+    default: "3"
+    description: "Maximum rounds, counted from cards already in work_dir"
+  # The executor injects this at approval time. Declaring it here lets the
+  # static validator accept {{_approval_message}}.
+  _approval_message: ""
+
+stages:
+  - name: read
+    steps:
+      - id: opening-read
+        agent: self
+        prompt: |
+          First read_file @market-fit:skills/market-fit/SKILL.md and
+          @market-fit:skills/market-fit/references/coaching.md. Follow them.
+          This prompt frames only the opening read.
+
+          Inputs:
+          - Work: {{work}}
+          - Audience as the user sees it: {{audience}}
+          - Target (may be empty): {{target}}
+          - Prior cards: {{work_dir}}/ (count prior rounds as files named growth-card-*.md)
+          - Round budget: {{budget}}
+
+          Read the work. If prior rounds >= {{budget}}, say so plainly, recommend
+          stopping, and ask only whether the user wants to raise the budget.
+
+          You cannot talk to the user during this step. Do not answer your own
+          questions. Edit nothing. Return, briefly and point first:
+
+          1. Round: N of {{budget}}. If a prior growth card exists, the dimension and
+             scaffold level it recommends starting from.
+          2. Opening questions: three to five from coaching.md, numbered, chosen for
+             this work.
+          3. Target: restate it, or propose one observable target if it is empty.
+          4. What you can already see in the work, labeled OBSERVED, set apart from
+             what you infer, labeled INFERRED.
+        output: read_prompt
+    approval:
+      required: true
+      prompt: |
+        {{read_prompt}}
+
+        ---
+        Approve with a message that answers the numbered questions in your own
+        words and confirms or rewrites the target. Deny to stop. Nothing has been written.
+
+  - name: carve
+    steps:
+      - id: five-passes
+        agent: self
+        prompt: |
+          First read_file @market-fit:skills/market-fit/SKILL.md and
+          @market-fit:skills/market-fit/references/coaching.md. Follow them.
+
+          Inputs:
+          - Work: {{work}}
+          - Opening read: {{read_prompt}}
+          - The user's answers, verbatim. They override your inferences:
+            {{_approval_message}}
+
+          Place the user privately on the five dimensions with evidence. Then prepare
+          the five passes for the user to choose from. You cannot talk to the user
+          during this step, so for each pass give:
+          - the gate, and whether their answers already meet it (pass, fail, unknown)
+          - for Find: their pain sentence as written, plus one contrast pair
+          - for Name: three candidate names drawn from their words, each with the
+            question "what would a stranger guess this is?"
+          - for Show: a before and after of the customer's day in two lines
+          - for Teach: one skeptic's question and a request to name the riskiest assumption
+          - for Test: a confidence question (low, medium, high) to answer before scoring
+          Never invent costs or customer quotes; mark them UNKNOWN and ask.
+          Point first, one question per pass, under sixty words per pass.
+        output: passes
+        timeout: 1200
+    approval:
+      required: true
+      prompt: |
+        {{passes}}
+
+        ---
+        Approve with a message that makes your choice at each pass, names what you
+        turned down, and gives your reason. Answer the skeptic and the confidence
+        question. Deny to stop without writing cards.
+
+  - name: close
+    steps:
+      - id: write-cards
+        agent: self
+        prompt: |
+          First read_file @market-fit:skills/market-fit/SKILL.md and
+          @market-fit:skills/market-fit/references/coaching.md. Follow them.
+
+          Inputs:
+          - Opening read: {{read_prompt}}
+          - Passes offered: {{passes}}
+          - The user's choices and reasons, verbatim: {{_approval_message}}
+          - Work dir: {{work_dir}}
+
+          1. Score the fit card against the target. Say pass, miss, or unknown, and
+             why. If it missed, give the diagnosis row and the pass to revisit.
+          2. Re-place the user on the five dimensions using only evidence from their
+             answers. Keep any dips and label each with its likely cause. Mark
+             reasons the user did not give as missing, never fill them in.
+          3. Write, using the templates in coaching.md, to {{work_dir}}/:
+             - fit-card-round-N.md
+             - growth-card-round-N.md (decision log uses the user's words)
+             Read both back to confirm they exist. Edit nothing else.
+          4. Return the two cards and one question for next time.
+          Claim no improvement and no customer signal that nobody observed.
+        output: final_output
+        timeout: 1200

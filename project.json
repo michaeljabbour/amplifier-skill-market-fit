@@ -1,0 +1,21 @@
+{
+  "name": "amplifier-skill-market-fit",
+  "displayName": "Market Fit",
+  "version": "0.1.0",
+  "description": "A coaching skill that helps a person carve one clear, customer-named offer out of a large body of work while growing their own judgment, with a static explanatory site.",
+  "license": "MIT",
+  "private": false,
+  "runtime": "Python >=3.11 (build only); browser (static site)",
+  "dependencies": [],
+  "skill": "skills/market-fit/SKILL.md",
+  "amplifierBundle": "bundle.md",
+  "build": "python3 scripts/build.py",
+  "check": "python3 scripts/check.py",
+  "output": "_site",
+  "publication": "Public source repository. Static site publishes to GitHub Pages from main.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michaeljabbour/amplifier-skill-market-fit.git"
+  },
+  "homepage": "https://michaeljabbour.github.io/amplifier-skill-market-fit/"
+}
