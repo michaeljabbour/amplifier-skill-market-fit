@@ -46,6 +46,19 @@ Each dimension is placed Early, Developing, or Strong, with the evidence behind 
 | Different audiences want different things | Two customers share one card | Split, then Find |
 | A full round with no movement | Wrong customer or wrong pain | Stop and talk to real people |
 
+## Launch zone
+
+The default target. The work is in the zone when every item holds in the latest round. It is a checklist, not a score; report each item separately.
+
+- Customer: one named role, in one setting, at the moment they feel the pain.
+- Problem: the stuck job in the customer's words, with a stated cost today.
+- Name: a stranger can guess the problem from the name and promise alone.
+- Picture: the before and after reads in about ten seconds.
+- Defense: the user explains every field of the fit card in their own words and names the riskiest assumption unprompted.
+- Signal: at least one real signal, or a named way to get one in the campaign's first week.
+
+Short of the zone, say which items are missing and which pass would move each one.
+
 ## Fit card
 
 ```
@@ -57,6 +70,7 @@ Name + promise    <name> · <one-sentence promise>
 Picture           <before> → <after>
 Why it holds      <causal story> · Riskiest assumption: <...>
 Evidence          Target: <...> · Result: <...> · Signal: <real or none yet>
+Launch zone       Customer <met/not> · Problem <..> · Name <..> · Picture <..> · Defense <..> · Signal <..>
 ```
 
 ## Growth card

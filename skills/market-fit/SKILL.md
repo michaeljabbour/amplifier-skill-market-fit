@@ -26,7 +26,7 @@ Before the first pass, hold a short, informal conversation. Use three to five of
 
 Privately place the user on the five dimensions in references/coaching.md: Customer, Problem, Naming, Reasoning, and Evidence, each Early, Developing, or Strong. Record your evidence for each placement. A placement is a working hypothesis about this person on this work today, never a judgment of their ability.
 
-Then agree on the target: an observable result that means "done" (for example, "a dean understands the offer in one read" or "two of five pilot leads reply"). Agree on the round budget: three by default.
+Then agree on the target. The default is the **launch zone**: the point where the fit card is clear enough to put in front of strangers in a campaign (the checklist is in references/coaching.md). The user may name a narrower observable target instead, for example "a dean understands the offer in one read". Agree on the round budget: three by default.
 
 ## Five passes per round
 
@@ -36,7 +36,7 @@ Each pass has a work output, a teaching move, and a gate. Do not advance until t
 2. **Name it for the customer.** The user offers three candidate names and a one-line promise. Before you comment, ask them to predict what a stranger would guess each name means. Flag mechanism words (engine, graph, hub, platform). Gate: a stranger could guess the problem from the name alone.
 3. **Show it in one picture.** The user sketches or describes the customer's day before and after. One picture, no architecture. If it needs boxes and arrows, point at the leftover stone. Gate: understood in about ten seconds.
 4. **Teach the why.** The user explains in their own words why this fit should hold. Correct only the gap. Play the skeptic once. Gate: the user names the riskiest assumption without being told.
-5. **Test against the target.** The user rates their confidence first. Then score the fit card against the agreed target, using a real signal when one exists. Gate: target met, or round budget reached.
+5. **Test against the target.** The user rates their confidence first. Then score the fit card against the agreed target, using a real signal when one exists. Gate: in the launch zone (or the agreed target is met), or the round budget is reached.
 
 At the end of every pass the user chooses what to keep. Log the choice, the option they turned down, and their reason in their own words. If they give no reason, the choice is not logged yet; ask one more question instead.
 
@@ -56,9 +56,9 @@ If a full round does not move the work, stop. The problem is upstream (the wrong
 
 ## Stop and hand over two cards
 
-Stop when the target is met, when the round budget ends, or when a round stalls. At exit, repeat the opening questions and place the user again. Always produce both cards, including when the run fails. The templates are in references/coaching.md.
+Stop when the work reaches the launch zone or the agreed target, when the round budget ends, or when a round stalls. Stop the moment the zone is reached; polishing past it is a different job. Say plainly whether the run ended in the zone, short of it, or stalled. At exit, repeat the opening questions and place the user again. Always produce both cards, including when the run fails. The templates are in references/coaching.md.
 
-- **Fit card:** customer, expensive problem, cost today, name and promise, picture, why it holds, evidence.
+- **Fit card:** customer, expensive problem, cost today, name and promise, picture, why it holds, evidence, and launch zone status (each checklist item met or not).
 - **Growth card:** started at (quoted), got to (quoted), the full jagged trace with labeled dips, the decision log, confidence against outcome at each test, and the dimension and scaffold level to start from next time.
 
 Save the cards only where the user authorizes, such as a file beside their work. Do not claim memory you have not saved somewhere future work will read. When you cannot ask the user at all, for example because you were delegated this task, work from the brief you were given, label every placement as assumed, and return your questions with the result instead of answering them yourself.

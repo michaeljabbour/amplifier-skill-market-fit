@@ -1,7 +1,7 @@
 ---
 bundle:
   name: market-fit
-  version: 0.1.0
+  version: 0.2.0
   description: >-
     Coaches a person to one clear, customer-named offer while growing their own
     judgment: the market-fit skill, a /fit working mode, and a staged,

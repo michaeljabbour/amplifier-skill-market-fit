@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.0 (2026-10-22)
+
+- Add the launch zone as the default target: a six-item checklist (customer, problem, name, picture, defense, signal) that marks a fit card as ready to carry a campaign. The run stops when it is reached.
+- Report launch zone status on the fit card, item by item.
+- Show the launch zone on the site and add a benchmark test for stopping in it.
+
 ## 0.1.0 (2026-10-22)
 
 - Add the `market-fit` skill: an opening read, five bounded passes (Find, Name, Show, Teach, Test), an exit rule, and two output cards.

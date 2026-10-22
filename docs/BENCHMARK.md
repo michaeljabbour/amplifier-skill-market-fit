@@ -15,6 +15,7 @@
 | Test | Passes if | Guards against |
 | --- | --- | --- |
 | Stops on time | 100% of runs end by round 3, and no run repeats all five passes after a failed gate | Endless loops |
+| Stops in the zone | Runs end within one pass of meeting all six launch-zone items, and no run that misses an item claims the zone | Polishing forever, or declaring victory early |
 | Stranger test | 7 of 10 strangers name the problem from the name and promise alone, beating the original name | Pretty names that say nothing |
 | Ten-second read | 8 of 10 viewers describe the before and after picture correctly after ten seconds | Architecture diagrams posing as value |
 | Cold transfer | A week later, unaided, the user carves a new portfolio and beats their opening read on 3 of 5 dimensions | Dependence on the AI |

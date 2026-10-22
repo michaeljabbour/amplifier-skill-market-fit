@@ -42,8 +42,8 @@ def read_reference(coaching, benchmark):
         raise ValueError('Expected five opening questions and five dimensions with three levels each')
     if len(moves) != 8 or any(len(m) != 3 for m in moves):
         raise ValueError('Expected eight teaching moves with what and where')
-    if len(diagnosis) < 5 or any(len(r) != 3 for r in diagnosis) or len(tests) != 10 or any(len(t) != 3 for t in tests):
-        raise ValueError('Diagnosis needs three columns; the benchmark needs ten tests')
+    if len(diagnosis) < 5 or any(len(r) != 3 for r in diagnosis) or len(tests) != 11 or any(len(t) != 3 for t in tests):
+        raise ValueError('Diagnosis needs three columns; the benchmark needs eleven tests')
     return questions, dimensions, moves, diagnosis, tests
 
 

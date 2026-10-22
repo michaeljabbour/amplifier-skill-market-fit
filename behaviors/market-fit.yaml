@@ -1,6 +1,6 @@
 bundle:
   name: market-fit-behavior
-  version: 0.1.0
+  version: 0.2.0
   description: |
     Wires the market-fit skill (tool-skills), the /fit mode (hooks-mode), and a
     staged recipe (tool-recipes) onto a host bundle. Adds no context of its own;
