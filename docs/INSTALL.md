@@ -1,14 +1,27 @@
 # Install Market Fit
 
-Builders working toward one clear offer for one customer.
+Bring one product, project or body of work and your best guess at its customer. You leave with a fit card for the offer and a separate growth card for your judgment.
 
-From this checkout:
+## From the public source
+
+Use Git and Python 3.11 or later. These commands install the complete method into a skills-parent directory:
 
 ```sh
-python3 scripts/capability.py install --dest /path/to/host/skills
+git clone https://github.com/michaeljabbour/amplifier-skill-market-fit.git
+cd amplifier-skill-market-fit
+python3 scripts/capability.py install --dest ~/.agents/skills
 ```
 
-Replace `/path/to/host/skills` with the host's skills parent directory. Keep the complete installed folder, references and license. The installer preserves conflicting local edits; `--replace` retains a dated backup.
+Choose the discovery directory supported by your agent. `~/.agents/skills` is an example. Start a new session if your host only discovers skills at startup, then ask for Market Fit by name with one task. Read the returned result and its sources before acting on it.
 
+The installer refuses conflicting files. Keep your changes before deliberately replacing a copy. It does not register a host, start a service or prove model behavior.
 
-Source and independent-install checks are recorded separately from customer evidence. No new demand, launch readiness or user growth is claimed.
+## Without a checkout
+
+Download the complete ZIP from [the public site](https://michaeljabbour.github.io/amplifier-skill-market-fit/#use-skill), extract it and place the whole skill folder in your host’s skills directory. Keep all references, helpers and license files together. The single SKILL.md download is for reading; use the whole folder to install.
+
+## What to expect
+
+Bring one product, project or body of work and your best guess at its customer. You leave with a fit card for the offer and a separate growth card for your judgment.
+
+A launch claim or sales forecast. The next real customer signal is still yours to collect.

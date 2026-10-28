@@ -8,6 +8,18 @@ A coaching skill that helps a person carve one clear, customer-named offer out o
 
 This project pairs the [`market-fit` skill](skills/market-fit/SKILL.md) and its [coaching reference](skills/market-fit/references/coaching.md) with an explanatory static website. The [benchmark plan](docs/BENCHMARK.md) sets the bar the skill has to clear; it has not been run yet.
 
+## First use
+
+Bring one product, project or body of work and your best guess at its customer. You leave with a fit card for the offer and a separate growth card for your judgment.
+
+```sh
+git clone https://github.com/michaeljabbour/amplifier-skill-market-fit.git
+cd amplifier-skill-market-fit
+python3 scripts/capability.py install --dest ~/.agents/skills
+```
+
+Requires Git and Python 3.11+. Use the skills directory supported by your agent. Ask for Market Fit in a new session and supply one real task. The [install guide](docs/INSTALL.md) explains the complete ZIP alternative and safe updates.
+
 ## Use the skill
 
 Give an agent the skill and the body of work: a repo, a deck, a site, or a paragraph. Say who you think it is for. The agent opens with a few plain questions, agrees a target with you, and then works attempt-first: you try each pass, it responds, and you choose. Expect short turns, one question at a time, and the occasional dry joke.

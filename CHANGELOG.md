@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-28 — Public first use
+
+- Add a complete public clone/install path beside the first useful outcome, with prerequisites, safe updates and a full-folder ZIP alternative. Preserve the existing method, films and interactive examples.
+
+
 ## 0.2.0 (2026-10-22)
 
 - Add the launch zone as the default target: a six-item checklist (customer, problem, name, picture, defense, signal) that marks a fit card as ready to carry a campaign. The run stops when it is reached.
