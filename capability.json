@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "id": "market-fit",
+  "display_name": "Market Fit",
+  "kind": "skill",
+  "promise": "Turn the work into one clear offer, and learn to defend it.",
+  "audience": "Builders working toward one clear offer for one customer.",
+  "trigger": "Bring the work and the evidence you have; the coaching keeps customer, problem, name, picture and defense separate.",
+  "skill_path": "skills/market-fit",
+  "install_commands": [
+    "python3 scripts/capability.py install --dest /path/to/host/skills"
+  ],
+  "runtime_install_commands": [],
+  "modes": [],
+  "examples": [],
+  "boundaries": [
+    "The existing canonical method and native interfaces remain the source of truth.",
+    "Publication, source inspection, component tests and outside-user benefit are separate claims."
+  ],
+  "evidence_summary": "Source and independent-install checks are recorded separately from customer evidence. No new demand, launch readiness or user growth is claimed.",
+  "verification": [],
+  "sources": [
+    {
+      "repo": "amplifier-skill-market-fit",
+      "commit": "fe6e696b60cb330ce0fd0f5300ccccefd2d8a7de",
+      "role": "Existing implementation and retained history",
+      "license": "MIT"
+    }
+  ],
+  "consolidation": [
+    {
+      "repo": "amplifier-skill-market-fit",
+      "paths": [
+        "skills/market-fit"
+      ],
+      "destination": "amplifier-skill-market-fit:canonical method or implementation",
+      "role": "method",
+      "action": "keep",
+      "why": "Bounded attempt-first coaching, explicit user choices, a launch checklist and a decision/growth trace.",
+      "interface": "Versioned request/result or plain-file contract; adapters do not own the method.",
+      "revision": "fe6e696b60cb330ce0fd0f5300ccccefd2d8a7de",
+      "sources": [
+        "https://github.com/michaeljabbour/amplifier-skill-market-fit/tree/fe6e696b60cb330ce0fd0f5300ccccefd2d8a7de/skills/market-fit"
+      ],
+      "source_paths": [
+        {
+          "path": "skills/market-fit",
+          "url": "https://github.com/michaeljabbour/amplifier-skill-market-fit/tree/fe6e696b60cb330ce0fd0f5300ccccefd2d8a7de/skills/market-fit"
+        }
+      ]
+    },
+    {
+      "repo": "amplifier-skill-market-fit",
+      "paths": [
+        "bundle.md",
+        "behaviors",
+        "modes",
+        "recipes"
+      ],
+      "destination": "amplifier-skill-market-fit:optional Amplifier surface",
+      "role": "adapter",
+      "action": "keep",
+      "why": "The host surface loads the canonical method rather than reproducing it.",
+      "interface": "On-demand discovery and bounded recipe; no always-on duplicate rubric.",
+      "revision": "fe6e696b60cb330ce0fd0f5300ccccefd2d8a7de",
+      "sources": [
+        "https://github.com/michaeljabbour/amplifier-skill-market-fit/blob/fe6e696b60cb330ce0fd0f5300ccccefd2d8a7de/bundle.md",
+        "https://github.com/michaeljabbour/amplifier-skill-market-fit/tree/fe6e696b60cb330ce0fd0f5300ccccefd2d8a7de/behaviors",
+        "https://github.com/michaeljabbour/amplifier-skill-market-fit/tree/fe6e696b60cb330ce0fd0f5300ccccefd2d8a7de/modes",
+        "https://github.com/michaeljabbour/amplifier-skill-market-fit/tree/fe6e696b60cb330ce0fd0f5300ccccefd2d8a7de/recipes"
+      ],
+      "source_paths": [
+        {
+          "path": "bundle.md",
+          "url": "https://github.com/michaeljabbour/amplifier-skill-market-fit/blob/fe6e696b60cb330ce0fd0f5300ccccefd2d8a7de/bundle.md"
+        },
+        {
+          "path": "behaviors",
+          "url": "https://github.com/michaeljabbour/amplifier-skill-market-fit/tree/fe6e696b60cb330ce0fd0f5300ccccefd2d8a7de/behaviors"
+        },
+        {
+          "path": "modes",
+          "url": "https://github.com/michaeljabbour/amplifier-skill-market-fit/tree/fe6e696b60cb330ce0fd0f5300ccccefd2d8a7de/modes"
+        },
+        {
+          "path": "recipes",
+          "url": "https://github.com/michaeljabbour/amplifier-skill-market-fit/tree/fe6e696b60cb330ce0fd0f5300ccccefd2d8a7de/recipes"
+        }
+      ]
+    },
+    {
+      "repo": "amplifier-skill-market-fit",
+      "paths": [
+        "site",
+        "scripts",
+        "docs"
+      ],
+      "destination": "amplifier-skill-market-fit:guide and evidence with separate install artifact",
+      "role": "reference/eval",
+      "action": "keep",
+      "why": "Keep source method, site explanation and dated results linked; media and reports are not runtime requirements.",
+      "interface": "Build-time source fidelity and versioned evidence references.",
+      "revision": "fe6e696b60cb330ce0fd0f5300ccccefd2d8a7de",
+      "sources": [
+        "https://github.com/michaeljabbour/amplifier-skill-market-fit/tree/fe6e696b60cb330ce0fd0f5300ccccefd2d8a7de/site",
+        "https://github.com/michaeljabbour/amplifier-skill-market-fit/tree/fe6e696b60cb330ce0fd0f5300ccccefd2d8a7de/scripts",
+        "https://github.com/michaeljabbour/amplifier-skill-market-fit/tree/fe6e696b60cb330ce0fd0f5300ccccefd2d8a7de/docs"
+      ],
+      "source_paths": [
+        {
+          "path": "site",
+          "url": "https://github.com/michaeljabbour/amplifier-skill-market-fit/tree/fe6e696b60cb330ce0fd0f5300ccccefd2d8a7de/site"
+        },
+        {
+          "path": "scripts",
+          "url": "https://github.com/michaeljabbour/amplifier-skill-market-fit/tree/fe6e696b60cb330ce0fd0f5300ccccefd2d8a7de/scripts"
+        },
+        {
+          "path": "docs",
+          "url": "https://github.com/michaeljabbour/amplifier-skill-market-fit/tree/fe6e696b60cb330ce0fd0f5300ccccefd2d8a7de/docs"
+        }
+      ]
+    }
+  ],
+  "docs": [
+    "docs/INSTALL.md",
+    "docs/CONSOLIDATION.md"
+  ],
+  "publication_status": "Local consolidation candidate; existing published versions remain separate.",
+  "site_builder": "native"
+}

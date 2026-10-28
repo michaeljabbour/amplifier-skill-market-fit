@@ -10,7 +10,7 @@ from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL_DIR = ROOT / 'skills/market-fit'
-SKILL_FILES = ('SKILL.md', 'references/coaching.md')
+SKILL_FILES = ('SKILL.md', 'references/coaching.md', 'LICENSE.md')
 LEVELS = {1: 'E', 2: 'D', 3: 'S'}
 
 

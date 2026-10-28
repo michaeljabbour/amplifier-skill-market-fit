@@ -16,3 +16,5 @@
 - Package the repository as the `market-fit` Amplifier bundle with the `/fit` mode and the staged `market-fit-round` recipe.
 - Add a fictional worked run and the benchmark plan. The benchmark has not been run.
 - Add a static explanatory site in the Amplifier Smart Tools family theme, with a checked GitHub Pages workflow.
+
+- Added a complete portable install with MIT notice and conflict-preserving local installer; retained the canonical method and independent evidence dimensions.

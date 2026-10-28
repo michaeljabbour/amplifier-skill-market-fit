@@ -94,3 +94,10 @@ This is a structured coaching aid, not a market research method, a validated ass
 ## License and provenance
 
 MIT; see [LICENSE](LICENSE). The family theme snapshot keeps its own [MIT notice](site/theme/LICENSE). The page follows the Amplifier Smart Tools family site as a design and implementation reference.
+
+
+## Portable capability and ownership
+
+Turn the work into one clear offer, and learn to defend it.
+
+Read the [installation guide](docs/INSTALL.md) for the supported local path and [consolidation record](docs/CONSOLIDATION.md) for ownership and evidence limits. Canonical catalog name: **Market Fit**; repository: `amplifier-skill-market-fit`.
