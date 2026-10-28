@@ -24,4 +24,4 @@ Download the complete ZIP from [the public site](https://michaeljabbour.github.i
 
 Bring one product, project or body of work and your best guess at its customer. You leave with a fit card for the offer and a separate growth card for your judgment.
 
-A launch claim or sales forecast. The next real customer signal is still yours to collect.
+Customer demand and sales remain unproven until you collect a real customer signal.
